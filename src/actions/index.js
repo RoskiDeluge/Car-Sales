@@ -4,23 +4,23 @@ export const RESET_PRICE = "RESET_PRICE";
 
 
 export const removeFeature = feature => {
-    console.log("rd: actions index.js: removeFeature", removeFeature);
+    // console.log("rd: actions index.js: removeFeature", removeFeature);
     return {
         type: REMOVE_FEATURE,
-        payload: { id: feature.id }
+        payload: feature
     }
 }
 
 export const buyItem = feature => {
     return {
         type: ADD_FEATURE,
-        payload: { id: feature.id, name: feature.name, price: feature.price }
+        payload: feature
     }
 }
 
 export const udpateTotalPrice = feature => {
     return {
         type: RESET_PRICE,
-        payload: { price: feature.price }
+        payload: feature
     }
 }
